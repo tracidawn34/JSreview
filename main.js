@@ -17,7 +17,7 @@ const returnEmptyObject = function () {
 };
 
 const returnString = function () {
-    return 'abc123'
+    return 'abc123';
 };
 
 const addition = function (x,y) {
@@ -77,12 +77,23 @@ const multiplicationArray = function () {
 };
 
 const divisionArray = function () {
-    
+    if (array1.length !== array2.length) {
+        return "Must be the same length.";
+      }
+      const resultArray = [];
+      for (let i = 0; i < array1.length; i++) {
+        resultArray.push(array1[i] / array2[i]);
+      }
+      return resultArray.toFixed(3);
 };
 
-const oddArray = function () {};
+const oddArray = function () {
+    return array.filter(num => num % 2 === 1);
+};
 
-const evenArray = function () {};
+const evenArray = function () {
+    return array.filter(num => num % 2 === 0);
+};
 
 module.exports = {
 returnEmptyString,
